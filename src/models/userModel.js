@@ -26,10 +26,10 @@ const userSchema = new mongoose.Schema({
     forgotPasswordToken: String,
     forgotPasswordTokenExpiry: Date,
     verifyToken: String,
-    verifyTokenDate: Date,
+    verifyTokenExpiry: Date,
 });
 
 // if 1st time , then make model else use the existing model
 const User = mongoose.models.users || mongoose.model("users", userSchema);
 
-export default userSchema;
+export default User;
