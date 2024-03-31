@@ -1,10 +1,10 @@
-import { error } from 'console';
+
 import mongoose from 'mongoose';
 
 export async function connect(){
     try {
         // '!' used to give type safety that string will come for sure. 
-        mongoose.connect(process.env.MONOGO_URL!)
+        mongoose.connect(process.env.MONGO_URL!)
         const connection = mongoose.connection
 
         connection.on('connected', () =>{
